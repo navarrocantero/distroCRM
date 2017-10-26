@@ -1,0 +1,98 @@
+.title {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 5%;
+    color: white;
+    justify-content: center;
+}
+
+body {
+
+    background-color: rgb(32, 32, 32);
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+    background-size: 10px 10px, 10px 10px, 10px 5px;
+    background-position: 0px 0px, 5px 5px, 0px 0px;
+    border-color: black;
+    color: white;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.mainTab {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    color: white;
+
+}
+
+.leftBox {
+
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    border-color: white;
+    border-style: solid;
+}
+
+.leftBox img {
+    width: 125px;
+    height: 125px;
+}
+
+tr {
+    border-color: white;
+    border-style: solid;
+}
+
+th {
+    border-color: white;
+    border-style: solid;
+}
+
+td {
+    border-color: white;
+    border-style: solid;
+}
+
+.inputs{
+    width: 800px;
+    height: 200px;
+
+}
+
+.mainTab img {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-self: flex-end;
+}
+
+.centerBox {
+    margin-top: 5px;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+.rightBox {
+
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
