@@ -1,6 +1,5 @@
 <?php
-
-$server = 'localhost';
-$database = 'distrowatch';
-$user = "manolo";
-$password = "manolo";
+    $server = 'localhost';
+    $database = 'distroadadb';
+    $user = 'manolo';
+    $pass = 'manolo';
