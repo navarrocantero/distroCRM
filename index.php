@@ -51,7 +51,7 @@ $query = $pdo->query("Select * from distroadadb.distro");
         <tbody>
         <?php while ($row = $query->fetch(PDO::FETCH_ASSOC)): ?>
             <tr>
-                <td><img src="<?= $row['image'] ?>"<img></td>
+                <td><img src="<?= $row['image'] ?>" class="listimage img-responsive"<img></td>
                 <td><?= $row['name'] ?></td>
                 <td><?= $row['ostype'] ?></td>
                 <td><?= $row['version'] ?></td>

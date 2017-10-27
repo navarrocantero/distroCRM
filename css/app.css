@@ -1,3 +1,18 @@
 body {
     padding-top: 50px;
 }
+
+.editar{
+    color: brown;
+}
+
+.borrar{
+    color: red;
+}
+
+.listimage{
+    
+    max-width: 120px;
+    max-height: 120px;
+
+}
