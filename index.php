@@ -39,6 +39,7 @@ $query = $pdo->query("Select * from distroadadb.distro");
     <table class="table table-striped">
         <thead>
         <tr>
+            <th>Image</th>
             <th>Name</th>
             <th>Os Type</th>
             <th>Version</th>
@@ -50,14 +51,13 @@ $query = $pdo->query("Select * from distroadadb.distro");
         <tbody>
         <?php while ($row = $query->fetch(PDO::FETCH_ASSOC)): ?>
             <tr>
-
+                <td><img src="<?= $row['image'] ?>"<img></td>
                 <td><?= $row['name'] ?></td>
                 <td><?= $row['ostype'] ?></td>
                 <td><?= $row['version'] ?></td>
                 <td><?= $row['main_page'] ?></td>
-                <td><span class="glyphicon glyphicon-pencil editar" aria-hidden="true"></span></td>
-                <td><span class="glyphicon glyphicon-trash borrar" aria-hidden="true"></span>
-                </td>
+                <td><span class="glyphicon glyphicon-pencil editar"></span></td>
+                <td><span class="glyphicon glyphicon-trash borrar"></span></td>
             </tr>
         <? endwhile; ?>
         </tbody>

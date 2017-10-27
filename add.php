@@ -27,11 +27,6 @@ if (!empty($_POST)) {
     $forums = trim(htmlspecialchars($_POST['forums']) ?? "");
     $doc = trim(htmlspecialchars($_POST['doc']) ?? "");
     $error_tracker = trim(htmlspecialchars($_POST['error_tracker']));
-//    $error_tracker = "";
-//    $version = "";
-//    $image =  "";
-//    $forums =  "";
-//    $doc =  "";
 
 
     if ($name === "") {
@@ -96,7 +91,7 @@ if (!empty($_POST)) {
             'doc' => $doc,
             "error_tracker" => $error_tracker
         ]);
-    //    header("location: index.php");
+    header("location: index.php");
     }
 
 }
@@ -108,7 +103,7 @@ if (!empty($_POST)) {
     <title>Add New Distro</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
