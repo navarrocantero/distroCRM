@@ -7,7 +7,7 @@
  */
 
 include_once('config.php');
-include_once('connectDb.php');
+include_once('connectdb.php');
 
 $id = $_REQUEST['id'];
 
