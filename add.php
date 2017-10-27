@@ -6,7 +6,7 @@ $errors = array();
 
 
 if (!empty($_POST)) {
-
+    $emptyImage = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/240px-No_image_available.svg.png";
     // required fields (NOT NULL SQL FIELDS)
     $name = trim(htmlspecialchars($_POST['distroName']));
     $description = trim(htmlspecialchars($_POST['description']));
@@ -23,7 +23,7 @@ if (!empty($_POST)) {
 
     // nullable fields ( NULL SQL FIELDS)
     $version = trim(htmlspecialchars($_POST['version']) ?? "");
-    $image = trim(htmlspecialchars($_POST['image']) ?? "");
+    $image = (trim(htmlspecialchars($_POST['image']) ?? ""));
     $forums = trim(htmlspecialchars($_POST['forums']) ?? "");
     $doc = trim(htmlspecialchars($_POST['doc']) ?? "");
     $error_tracker = trim(htmlspecialchars($_POST['error_tracker']));
@@ -66,6 +66,11 @@ if (!empty($_POST)) {
         $errors['status']['required'] = "Status is required";
     }
 
+
+    if ($image === "") {
+        $image = $emptyImage;
+    }
+
     if (!empty($errors)) {
         print_r($errors);
 
@@ -91,7 +96,7 @@ if (!empty($_POST)) {
             'doc' => $doc,
             "error_tracker" => $error_tracker
         ]);
-    header("location: index.php");
+        header("location: index.php");
     }
 
 }
