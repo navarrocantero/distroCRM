@@ -11,7 +11,7 @@ include_once('connectdb.php');
 
 $id = $_REQUEST['id'];
 
-$sql = "DELETE FROM clientes WHERE id = :id LIMIT 1";
+$sql = "DELETE FROM distro WHERE id = :id LIMIT 1";
 
 $result = $pdo->prepare($sql);
 
@@ -23,5 +23,3 @@ header('Location: index.php');
 
 
 
-
-der('Location: index.php');

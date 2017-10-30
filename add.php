@@ -121,12 +121,11 @@ if (!empty($_POST)) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">DistroADA</a>
+            <a class="navbar-brand" href="index.php">DistroADA</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse    ">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php">Inicio</a></li>
-                <li><a href="add.php">Añadir Distro</a></li>
+
             </ul>
         </div><!--/.nav-collapse -->
     </div>

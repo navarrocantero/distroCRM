@@ -7,7 +7,7 @@ $query = $pdo->query("Select * from distroadadb.distro");
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Starter Template for Bootstrap</title>
+    <title>DistroAda</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/app.css">
@@ -23,11 +23,10 @@ $query = $pdo->query("Select * from distroadadb.distro");
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">DistroADA</a>
+            <a class="navbar-brand" href="index.php">DistroADA</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php">Inicio</a></li>
                 <li><a href="add.php">Añadir Distro</a></li>
             </ul>
         </div><!--/.nav-collapse -->
@@ -35,7 +34,7 @@ $query = $pdo->query("Select * from distroadadb.distro");
 </nav>
 
 <div class="container">
-    <h1>Most Popular Distros</h1>
+    <h1>Most Popular Distros in the WWW</h1>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -56,8 +55,11 @@ $query = $pdo->query("Select * from distroadadb.distro");
                 <td><?= $row['ostype'] ?></td>
                 <td><?= $row['version'] ?></td>
                 <td><?= $row['main_page'] ?></td>
-                <td><span class="glyphicon glyphicon-pencil editar"></span></td>
-                <td><span class="glyphicon glyphicon-trash borrar"></span></td>
+                <td><a href="showDistro.php?id=<?= $row['id'] ?>" class="borrar"><span
+                                class="glyphicon glyphicon-search"
+                                aria-hidden="true"></span></a></td>
+                <td><a href="delete.php?id=<?= $row['id'] ?>" class="borrar"><span class="glyphicon glyphicon-trash"
+                                                                                   aria-hidden="true"></span></a></td>
             </tr>
         <? endwhile; ?>
         </tbody>
